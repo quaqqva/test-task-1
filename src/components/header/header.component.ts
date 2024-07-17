@@ -5,26 +5,26 @@ import { LogoComponent } from './logo/logo.component';
 import './header.component.scss';
 
 export class HeaderComponent extends DOMComponent<HTMLElement> {
-  public constructor() {
-    const links = [
-      {
-        url: '#',
-        text: 'Как это работает',
-      },
-      {
-        url: '#',
-        text: '3-й блок',
-      },
-      {
-        url: '#',
-        text: 'Вопросы и ответы',
-      },
-      {
-        url: '#',
-        text: 'Форма',
-      },
-    ];
+  private static LINKS = [
+    {
+      url: '#',
+      text: 'Как это работает',
+    },
+    {
+      url: '#',
+      text: '3-й блок',
+    },
+    {
+      url: '#',
+      text: 'Вопросы и ответы',
+    },
+    {
+      url: '#',
+      text: 'Форма',
+    },
+  ];
 
+  public constructor() {
     super({
       tag: 'header',
       classList: ['header'],
@@ -36,7 +36,7 @@ export class HeaderComponent extends DOMComponent<HTMLElement> {
           children: [
             ul({
               classList: ['header__links'],
-              children: links.map(({ url, text }) => {
+              children: HeaderComponent.LINKS.map(({ url, text }) => {
                 return a({
                   url,
                   textContent: text,
