@@ -1,0 +1,27 @@
+@import 'mixins/base';
+@import 'mixins/typography';
+
+.logo {
+  @include flex($gap: 9px, $align-items: flex-start);
+
+  &__circle {
+    display: inline-block;
+    width: 24px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+
+    &:first-of-type {
+      background-color: var(--color-primary);
+      translate: 50%;
+    }
+
+    &:last-of-type {
+      background-color: var(--light-gray);
+    }
+  }
+
+  &__heading {
+    color: var(--white);
+    @include heading-5();
+  }
+}

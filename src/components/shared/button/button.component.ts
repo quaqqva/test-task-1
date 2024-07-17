@@ -1,14 +1,19 @@
-import { DOMComponent, ElementParameters } from './dom-component';
+import { DOMComponent, ElementParameters } from '../dom-component';
+import './button.component.scss';
 
 type ButtonParameters = Pick<
   ElementParameters,
   'textContent' | 'classList' | 'attributes'
 > & {
-  severity: 'primary' | 'secondary';
+  severity?: 'primary' | 'default';
   clickHandler?: () => void;
 };
 
-export function button({ textContent, classList, severity }: ButtonParameters) {
+export function button({
+  textContent,
+  classList,
+  severity = 'default',
+}: ButtonParameters) {
   return new DOMComponent<HTMLHeadingElement>({
     tag: `button`,
     textContent,

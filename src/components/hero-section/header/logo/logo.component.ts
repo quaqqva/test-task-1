@@ -1,6 +1,7 @@
-import { div } from '../../../utils/div.component';
-import { DOMComponent } from '../../../utils/dom-component';
-import { heading } from '../../../utils/heading.component';
+import { div } from '../../../shared/div.component';
+import { DOMComponent } from '../../../shared/dom-component';
+import { heading } from '../../../shared/heading.component';
+import './logo.component.scss';
 
 export class LogoComponent extends DOMComponent<HTMLLinkElement> {
   public constructor() {
@@ -11,10 +12,15 @@ export class LogoComponent extends DOMComponent<HTMLLinkElement> {
         href: '',
       },
       children: [
-        div({ classList: ['logo__first-circle'] }),
-        div({ classList: ['logo__second-circle'] }),
+        div({
+          classList: ['logo__inner'],
+          children: [
+            div({ classList: ['logo__circle'] }),
+            div({ classList: ['logo__circle'] }),
+          ],
+        }),
         heading({
-          level: 5,
+          level: 1,
           textContent: 'testLab',
           classList: ['logo__heading'],
         }),

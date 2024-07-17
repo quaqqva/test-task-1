@@ -1,0 +1,68 @@
+@import 'mixins/base';
+@import 'mixins/typography';
+@import 'functions';
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+
+  @include flex();
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    background-image: url('../../assets/images/hero-section-bg.jpg');
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: -2;
+  }
+
+  &::after {
+    background-color: var(--color-primary);
+    opacity: 0.8;
+    z-index: -1;
+  }
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__inner {
+    width: 748px;
+    color: white;
+  }
+
+  &__heading {
+    @include heading-1();
+    padding-bottom: 18px;
+  }
+
+  &__subheading {
+    @include font-18();
+    padding-bottom: 92px;
+  }
+
+  &__heading,
+  &__subheading {
+    text-align: center;
+  }
+
+  &__subheading,
+  &__button {
+    display: block;
+    margin: 0 auto;
+  }
+}

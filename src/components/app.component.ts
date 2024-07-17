@@ -1,5 +1,5 @@
 import { HeroSectionComponent } from './hero-section/hero-section.component';
-import { DOMComponent } from './utils/dom-component';
+import { DOMComponent } from './shared/dom-component';
 
 export class AppComponent extends DOMComponent<HTMLElement> {
   public constructor() {

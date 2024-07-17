@@ -54,7 +54,16 @@ module.exports = {
               },
             },
           },
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                includePaths: [
+                  path.resolve(__dirname, 'src', 'global-styles', 'abstracts'),
+                ]
+              }
+            }
+          }
         ],
       },
       {
@@ -77,7 +86,7 @@ module.exports = {
         },
       },
       {
-        test: /\.ttf$/,
+        test: /\.(ttf|eot|woff|woff2)$/,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[hash][ext][query]',
