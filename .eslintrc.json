@@ -22,12 +22,12 @@
   },
   "rules": {
     "no-debugger": "off",
-    "no-console": 0,
-    "class-methods-use-this": "off",
+    "no-console": 2,
     "@typescript-eslint/no-explicit-any": 2,
     "prettier/prettier": "warn",
     "arrow-body-style": "off",
-    "prefer-arrow-callback": "off"
+    "prefer-arrow-callback": "off",
+    "import/prefer-default-export": "off"
   },
   "root": true
 }

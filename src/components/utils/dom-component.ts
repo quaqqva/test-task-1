@@ -19,13 +19,22 @@ export class DOMComponent<T extends HTMLElement> {
     return component;
   }
 
-  public static FromElement<T extends HTMLElement>(element: T): DOMComponent<T> {
+  public static FromElement<T extends HTMLElement>(
+    element: T,
+  ): DOMComponent<T> {
     const component = new DOMComponent<T>({ tag: element.tagName });
     component.element = element;
     return component;
   }
 
-  public constructor({ tag, textContent, classList, attributes, parent, children }: ElementParameters) {
+  public constructor({
+    tag,
+    textContent,
+    classList,
+    attributes,
+    parent,
+    children,
+  }: ElementParameters) {
     this.element = document.createElement(tag) as T;
 
     if (textContent) this.textContent = textContent;
@@ -59,7 +68,9 @@ export class DOMComponent<T extends HTMLElement> {
     node.parentNode?.insertBefore(this.element, node);
   }
 
-  public append(...elements: (HTMLElement | DOMComponent<HTMLElement>)[]): void {
+  public append(
+    ...elements: (HTMLElement | DOMComponent<HTMLElement>)[]
+  ): void {
     elements.forEach((element) => {
       if (element instanceof DOMComponent) this.element.append(element.element);
       else this.element.append(element);
@@ -98,7 +109,10 @@ export class DOMComponent<T extends HTMLElement> {
     this.element.addEventListener(event, listener);
   }
 
-  public removeEventListener(event: string, listener: (e: Event) => void): void {
+  public removeEventListener(
+    event: string,
+    listener: (e: Event) => void,
+  ): void {
     this.element.removeEventListener(event, listener);
   }
 
