@@ -6,6 +6,7 @@ import deliveryTruckIcon from '../../../assets/images/how-it-works-section/deliv
 import secureIcon from '../../../assets/images/how-it-works-section/secure.svg';
 import moneyBagsIcon from '../../../assets/images/how-it-works-section/money-bags.svg';
 import { div } from '../../shared/div.component';
+import './how-it-works-section.component.scss';
 
 export class HowItWorksSectionComponent extends DOMComponent<HTMLElement> {
   private static STEPS: StepInfo[] = [

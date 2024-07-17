@@ -2,11 +2,13 @@
   $justify-content: center,
   $align-items: center,
   $direction: row,
-  $gap: 0
+  $gap: 0,
+  $wrap: nowrap
 ) {
   display: flex;
   justify-content: $justify-content;
   align-items: $align-items;
   flex-direction: $direction;
   gap: $gap;
+  flex-wrap: $wrap;
 }

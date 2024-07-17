@@ -1,7 +1,9 @@
+import { div } from '../../../shared/div.component';
 import { DOMComponent } from '../../../shared/dom-component';
 import { heading } from '../../../shared/heading.component';
 import { image } from '../../../shared/image.component';
 import { p } from '../../../shared/paragraph.component';
+import './step-card.component.scss';
 
 export type StepInfo = {
   title: string;
@@ -20,14 +22,19 @@ export class StepCardComponent extends DOMComponent<HTMLDivElement> {
           alt: stepInfo.title,
           classList: ['step-card__icon'],
         }),
-        heading({
-          level: 6,
-          textContent: stepInfo.title,
-          classList: ['step-card__title'],
-        }),
-        p({
-          textContent: stepInfo.description,
-          classList: ['step-card__description'],
+        div({
+          classList: ['step-card__text'],
+          children: [
+            heading({
+              level: 6,
+              textContent: stepInfo.title,
+              classList: ['step-card__title'],
+            }),
+            p({
+              textContent: stepInfo.description,
+              classList: ['step-card__description'],
+            }),
+          ],
         }),
       ],
     });
