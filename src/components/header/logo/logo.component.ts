@@ -20,7 +20,7 @@ export class LogoComponent extends DOMComponent<HTMLLinkElement> {
           ],
         }),
         heading({
-          level: 1,
+          level: 5,
           textContent: 'testLab',
           classList: ['logo__heading'],
         }),

@@ -15,7 +15,7 @@ export class HeroSectionComponent extends DOMComponent<HTMLElement> {
           classList: ['hero-section__inner'],
           children: [
             heading({
-              level: 2,
+              level: 1,
               classList: ['hero-section__heading'],
               textContent: 'Говорят, никогда не поздно сменить профессию',
             }),
