@@ -1,9 +1,8 @@
-import { button } from '../shared/button/button.component';
-import { div } from '../shared/div.component';
-import { DOMComponent } from '../shared/dom-component';
-import { heading } from '../shared/heading.component';
-import { p } from '../shared/paragraph.component';
-import { HeaderComponent } from './header/header.component';
+import { button } from '../../shared/button/button.component';
+import { div } from '../../shared/div.component';
+import { DOMComponent } from '../../shared/dom-component';
+import { heading } from '../../shared/heading.component';
+import { p } from '../../shared/paragraph.component';
 import './hero-section.component.scss';
 
 export class HeroSectionComponent extends DOMComponent<HTMLElement> {
@@ -12,7 +11,6 @@ export class HeroSectionComponent extends DOMComponent<HTMLElement> {
       tag: 'section',
       classList: ['hero-section'],
       children: [
-        new HeaderComponent(['hero-section__header']),
         div({
           classList: ['hero-section__inner'],
           children: [

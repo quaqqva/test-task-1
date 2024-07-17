@@ -1,4 +1,5 @@
-import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { HeaderComponent } from './header/header.component';
+import { MainPageComponent } from './main-page/main-page.component';
 import { DOMComponent } from './shared/dom-component';
 
 export class AppComponent extends DOMComponent<HTMLElement> {
@@ -6,7 +7,7 @@ export class AppComponent extends DOMComponent<HTMLElement> {
     super({
       tag: 'div',
       classList: ['app'],
-      children: [new HeroSectionComponent()],
+      children: [new HeaderComponent(), new MainPageComponent()],
     });
   }
 }

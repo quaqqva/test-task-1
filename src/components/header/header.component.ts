@@ -1,11 +1,11 @@
-import { a } from '../../shared/a.component';
-import { DOMComponent } from '../../shared/dom-component';
-import { ul } from '../../shared/ul.component';
+import { a } from '../shared/a.component';
+import { DOMComponent } from '../shared/dom-component';
+import { ul } from '../shared/ul.component';
 import { LogoComponent } from './logo/logo.component';
 import './header.component.scss';
 
 export class HeaderComponent extends DOMComponent<HTMLElement> {
-  public constructor(classList: string[] = []) {
+  public constructor() {
     const links = [
       {
         url: '#',
@@ -27,7 +27,7 @@ export class HeaderComponent extends DOMComponent<HTMLElement> {
 
     super({
       tag: 'header',
-      classList: ['header', ...classList],
+      classList: ['header'],
       children: [
         new LogoComponent(),
         new DOMComponent<HTMLElement>({

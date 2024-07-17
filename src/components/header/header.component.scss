@@ -5,6 +5,11 @@
   width: 100%;
   height: 80px;
 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--header-layer);
+
   @include flex($justify-content: space-around);
 
   &__links {

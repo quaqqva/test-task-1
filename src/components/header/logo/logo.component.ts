@@ -1,6 +1,6 @@
-import { div } from '../../../shared/div.component';
-import { DOMComponent } from '../../../shared/dom-component';
-import { heading } from '../../../shared/heading.component';
+import { div } from '../../shared/div.component';
+import { DOMComponent } from '../../shared/dom-component';
+import { heading } from '../../shared/heading.component';
 import './logo.component.scss';
 
 export class LogoComponent extends DOMComponent<HTMLLinkElement> {
