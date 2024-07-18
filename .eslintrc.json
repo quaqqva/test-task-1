@@ -1,7 +1,8 @@
 {
-  "plugins": ["prettier", "import", "@typescript-eslint"],
+  "plugins": ["prettier", "import", "@typescript-eslint", "react"],
   "extends": [
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
     "airbnb-base",
     "airbnb-typescript/base",
     "prettier"
@@ -13,7 +14,10 @@
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "env": {
     "es6": true,
@@ -25,9 +29,17 @@
     "no-console": 2,
     "@typescript-eslint/no-explicit-any": 2,
     "prettier/prettier": "warn",
-    "arrow-body-style": "off",
-    "prefer-arrow-callback": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "eslint-plugin-import/prefer-default-export": "off"
   },
+  "overrides": [
+    {
+      "files": ["*.jsx", "*.tsx"],
+      "rules": {
+        "import/extensions": "off",
+        "eslint-plugin-import/extensions": "off"
+      }
+    }
+  ],
   "root": true
 }

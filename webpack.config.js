@@ -9,9 +9,9 @@ const target = isDevMode ? 'web' : 'browserslist';
 const devtool = isDevMode ? 'source-map' : undefined;
 
 module.exports = {
-  entry: ['@babel/polyfill', './src/main.ts'],
+  entry: ['@babel/polyfill', './src/index.tsx'],
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.js', '.tsx', '.jsx'],
   },
   mode: buildMode,
   target,
