@@ -4,6 +4,7 @@
   margin: 0 auto;
   width: 100%;
 
+  $slider-content-vertical-padding: 20px;
   $slider-content-side-padding: 30px;
   --slide-gap: 80px;
 
@@ -14,7 +15,7 @@
   &__viewport {
     width: 100%;
     overflow-x: hidden;
-    padding: 0 $slider-content-side-padding 50px;
+    padding: $slider-content-vertical-padding $slider-content-side-padding;
   }
 
   &__slides {
@@ -27,6 +28,7 @@
   }
 
   &__pagination {
+    padding-top: calc(50px - $slider-content-vertical-padding);
     margin: 0 auto;
     @include flex($gap: 17px);
 
