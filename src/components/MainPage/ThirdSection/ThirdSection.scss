@@ -25,6 +25,12 @@
     height: 448px;
   }
 
+  &__truck-image,
+  &__man-image {
+    width: 100%;
+    height: 100%;
+  }
+
   &__truck-image {
     position: absolute;
     top: 0;

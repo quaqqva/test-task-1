@@ -1,0 +1,52 @@
+@import 'mixins/base';
+
+.slider {
+  margin: 0 auto;
+  width: 100%;
+
+  $slider-content-side-padding: 30px;
+  --slide-gap: 80px;
+
+  &__inner {
+    @include flex($gap: calc(32px - $slider-content-side-padding));
+  }
+
+  &__viewport {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0 $slider-content-side-padding 50px;
+  }
+
+  &__slides {
+    @include flex($justify-content: flex-start, $gap: var(--slide-gap));
+    transition: translate 0.5s ease-in-out;
+  }
+
+  &__slide {
+    @include flex($gap: 32px);
+  }
+
+  &__pagination {
+    margin: 0 auto;
+    @include flex($gap: 17px);
+
+    &-button {
+      width: 8px;
+      aspect-ratio: 1 / 1;
+
+      border-radius: 100%;
+      border: none;
+
+      padding: 0;
+
+      &_active {
+        pointer-events: none;
+        background-color: var(--color-primary);
+      }
+
+      &:hover {
+        background-color: var(--color-primary-hover);
+      }
+    }
+  }
+}

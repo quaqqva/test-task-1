@@ -36,4 +36,27 @@
       border-color: var(--color-primary-hover);
     }
   }
+
+  &_icon-only {
+    width: 32px;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+
+    font-size: 32px;
+
+    will-change: color;
+    transition: color var(--hover-transition);
+
+    color: var(--mid-gray);
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
 }
