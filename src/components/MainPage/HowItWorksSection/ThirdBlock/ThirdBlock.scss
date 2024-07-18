@@ -1,7 +1,7 @@
 @import 'mixins/base';
 @import 'mixins/typography';
 
-.third-section {
+.third-block {
   padding: 80px 0;
   @include flex($gap: 32px);
 

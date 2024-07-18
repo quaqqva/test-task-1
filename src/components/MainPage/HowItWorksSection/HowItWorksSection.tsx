@@ -4,6 +4,7 @@ import waitingIcon from '../../../assets/images/how-it-works-section/waiting.svg
 import deliveryTruckIcon from '../../../assets/images/how-it-works-section/delivery-truck.svg';
 import secureIcon from '../../../assets/images/how-it-works-section/secure.svg';
 import moneyBagsIcon from '../../../assets/images/how-it-works-section/money-bags.svg';
+import { ThirdBlock } from './ThirdBlock/ThirdBlock';
 import './HowItWorksSection.scss';
 
 const steps: StepInfo[] = [
@@ -39,5 +40,6 @@ export const HowItWorksSection = () => (
         <StepCard stepInfo={step} key={step.title} />
       ))}
     </div>
+    <ThirdBlock />
   </section>
 );

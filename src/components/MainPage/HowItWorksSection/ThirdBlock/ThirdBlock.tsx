@@ -1,15 +1,15 @@
 import React from 'react';
-import manImage from '../../../assets/images/third-section/man.png';
-import truckImage from '../../../assets/images/third-section/truck.jpg';
-import './ThirdSection.scss';
+import manImage from '../../../../assets/images/third-block/man.png';
+import truckImage from '../../../../assets/images/third-block/truck.jpg';
+import './ThirdBlock.scss';
 
-export const ThirdSection = () => (
-  <section className="third-section">
-    <div className="third-section__text">
-      <h3 className="third-section__heading">
+export const ThirdBlock = () => (
+  <div className="third-block">
+    <div className="third-block__text">
+      <h3 className="third-block__heading">
         Круто, ты дошёл до третьего блока
       </h3>
-      <p className="third-section__description">
+      <p className="third-block__description">
         63% опрошенных пользовались кредитами из-за того, что не могли покрыть
         непредвиденные расходы свыше 15 000 ₽.
         <br />
@@ -18,17 +18,17 @@ export const ThirdSection = () => (
         экономить деньги на процентах и штрафах.
       </p>
     </div>
-    <div className="third-section__images">
+    <div className="third-block__images">
       <img
-        className="third-section__man-image"
+        className="third-block__man-image"
         src={manImage}
         alt="Картинка с человеком"
       />
       <img
-        className="third-section__truck-image"
+        className="third-block__truck-image"
         src={truckImage}
         alt="Картинка грузовика"
       />
     </div>
-  </section>
+  </div>
 );
