@@ -18,8 +18,30 @@
   }
 
   &__link {
-    color: var(--white);
+    display: inline-block;
+    position: relative;
+    overflow-x: hidden;
 
+    color: var(--white);
     @include font-16;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 1px;
+
+      background-color: var(--white);
+
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+
+      transition: translate var(--hover-transition);
+      translate: -100%;
+    }
+
+    &:hover::before {
+      translate: 0;
+    }
   }
 }
