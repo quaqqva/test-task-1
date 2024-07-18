@@ -1,5 +1,4 @@
 @import 'mixins/base';
-@import 'mixins/typography';
 
 .logo {
   @include flex($gap: 9px, $align-items: flex-start);

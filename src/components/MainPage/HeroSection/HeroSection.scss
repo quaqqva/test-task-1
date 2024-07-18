@@ -1,6 +1,4 @@
 @import 'mixins/base';
-@import 'mixins/typography';
-@import 'functions';
 
 .hero-section {
   width: 100%;
@@ -42,13 +40,12 @@
   }
 
   &__heading {
-    @include heading-1();
-    padding-bottom: 18px;
+    @include heading-1;
     text-align: center;
   }
 
   &__subheading {
-    @include font-18();
-    padding-bottom: 92px;
+    @include font-18;
+    padding: 18px 0 92px;
   }
 }

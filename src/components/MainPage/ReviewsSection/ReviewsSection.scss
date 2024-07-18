@@ -1,18 +1,13 @@
-@import 'mixins/typography';
+@import 'mixins/base';
 
 .reviews-section {
   background-color: var(--extralight-gray);
   width: 100%;
-  padding: 57px 0 45px;
 
-  &__heading {
-    @include heading-2;
-    text-align: center;
-
-    padding-bottom: 12px;
-  }
+  @include section($padding: 56px 0 44px);
 
   .slider {
+    padding-top: 12px;
     width: 1215px;
   }
 }

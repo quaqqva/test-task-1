@@ -1,17 +1,10 @@
 @import 'mixins/base';
-@import 'mixins/typography';
 
 .how-it-works-section {
-  padding-top: 80px;
-
-  &__heading {
-    @include heading-2;
-    text-align: center;
-
-    padding-bottom: 42px;
-  }
+  @include section;
 
   &__steps {
+    padding-top: 60px;
     @include flex($gap: 32px, $wrap: wrap);
   }
 }
