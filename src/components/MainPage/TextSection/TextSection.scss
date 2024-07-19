@@ -1,0 +1,22 @@
+@import 'mixins/base';
+
+.text-section {
+  background-color: var(--extralight-gray);
+
+  @include flex($align-items: flex-start, $gap: 32px 36px, $wrap: wrap);
+  @include section($padding: 68px 0);
+
+  &__text-block {
+    width: 592px;
+    @include flex($align-items: flex-start, $direction: column, $gap: 16px);
+  }
+
+  &__title {
+    @include font-18;
+    @include font-bold;
+  }
+
+  &__description {
+    @include font-16;
+  }
+}

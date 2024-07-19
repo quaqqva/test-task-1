@@ -23,7 +23,7 @@ export const Accordion = ({ items }: AccordionProps) => {
             className="accordion__heading"
             onClick={() => setActiveIndex(activeIndex === index ? null : index)}
           >
-            <span className="accordion__title">{item.title}</span>
+            <p className="accordion__title">{item.title}</p>
             <span className="accordion__status-icon">
               <i className="fi fi-sr-plus-small"></i>
             </span>
