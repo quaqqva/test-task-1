@@ -29,8 +29,14 @@ export const App = () => {
     <MobileNavigationMenuContext.Provider
       value={{
         isOpen: isMobileMenuOpen,
-        close: () => setIsMobileMenuOpen(false),
-        open: () => setIsMobileMenuOpen(true),
+        close: () => {
+          document.body.style.overflow = 'auto';
+          setIsMobileMenuOpen(false);
+        },
+        open: () => {
+          setIsMobileMenuOpen(true);
+          document.body.style.overflow = 'hidden';
+        },
       }}
     >
       {appContent}

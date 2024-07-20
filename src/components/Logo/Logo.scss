@@ -1,6 +1,8 @@
 @import 'mixins/base';
 
 .logo {
+  $self: &;
+
   @include flex($gap: 9px, $align-items: flex-start);
 
   &__circle {
@@ -20,7 +22,18 @@
   }
 
   &__heading {
-    color: var(--white);
     @include heading-5();
+  }
+
+  &_light {
+    #{$self}__heading {
+      color: var(--white);
+    }
+  }
+
+  &_dark {
+    #{$self}__heading {
+      color: var(--black);
+    }
   }
 }

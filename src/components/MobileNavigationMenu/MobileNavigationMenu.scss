@@ -1,0 +1,44 @@
+@import 'mixins/base';
+
+.mobile-navigation {
+  padding: 0 16px;
+
+  &__heading {
+    width: 100%;
+    height: 80px;
+    @include flex($justify-content: space-between);
+  }
+
+  &__close-button {
+    $size: 16px;
+    font-size: $size;
+    height: $size;
+    color: var(--black);
+
+    translate: 0 -3px;
+  }
+
+  &__heading,
+  &__link {
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  &__links {
+    list-style: none;
+  }
+}
+
+.mobile-navigation-link {
+  @include flex($justify-content: space-between);
+  padding: 16px 0;
+  width: 100%;
+
+  color: var(--gray);
+  @include font-18;
+
+  &__icon {
+    width: 24px;
+    font-size: 18px;
+    translate: 0 2px;
+  }
+}
