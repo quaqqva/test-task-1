@@ -1,6 +1,6 @@
 import React from 'react';
-import './FaqSection.scss';
 import { Accordion } from '../../shared/Accordion/Accordion';
+import './FaqSection.scss';
 
 let questions = [
   {

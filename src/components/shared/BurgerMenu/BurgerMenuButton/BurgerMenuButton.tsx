@@ -1,6 +1,6 @@
 import React from 'react';
-import './BurgerMenuButton.scss';
 import { BurgerMenuContext } from '../BurgerMenu';
+import './BurgerMenuButton.scss';
 
 type BurgerMenuButtonProps = {
   context: BurgerMenuContext;

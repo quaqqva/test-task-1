@@ -43,7 +43,7 @@ export const FormSection = () => {
           ></Controller>
           <TextInput
             id="phoneNumber"
-            labelText="Номер телефона"
+            labelText="Телефон"
             type="tel"
             {...registerWithMask('phoneNumber', ['+7 (999) 999-99-99'], {
               pattern: {

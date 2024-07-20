@@ -3,9 +3,9 @@ import { Logo } from '../Logo/Logo';
 import { NAVIGATION_LINKS } from '../../constants/navigation-links';
 import { useMatchMedia } from '../../utils/use-match-media';
 import { TABLET_WIDTH } from '../../constants/breakpoints';
-import './Header.scss';
 import { BurgerMenuButton } from '../shared/BurgerMenu/BurgerMenuButton/BurgerMenuButton';
 import { MobileNavigationMenuContext } from '../MobileNavigationMenu/MobileNavigationMenu';
+import './Header.scss';
 
 export const Header = () => {
   const isTablet = useMatchMedia(

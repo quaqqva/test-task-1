@@ -3,8 +3,8 @@ import firstReviewerPicture from '../../../assets/images/reviews-section/reviewe
 import secondReviewerPicture from '../../../assets/images/reviews-section/reviewer-2.png';
 import thirdReviewerPicture from '../../../assets/images/reviews-section/reviewer-3.png';
 import { Review, ReviewCard } from './ReviewCard/ReviewCard';
-import './ReviewsSection.scss';
 import { Slider, SliderBreakpoint } from '../../shared/Slider/Slider';
+import './ReviewsSection.scss';
 
 const reviewsBase: Review[] = [
   {
