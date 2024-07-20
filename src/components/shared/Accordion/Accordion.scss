@@ -35,7 +35,11 @@
   }
 
   &__heading {
-    @include flex($justify-content: space-between, $gap: 20px);
+    @include flex(
+      $justify-content: space-between,
+      $gap: 20px,
+      $align-items: flex-start
+    );
     cursor: pointer;
 
     will-change: color;
