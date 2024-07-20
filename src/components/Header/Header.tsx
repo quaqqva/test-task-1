@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Logo } from '../Logo/Logo';
 import { NAVIGATION_LINKS } from '../../constants/navigation-links';
-import { useMatchMedia } from '../../hooks/use-match-media';
+import { useMatchMedia } from '../../utils/use-match-media';
 import { TABLET_WIDTH } from '../../constants/breakpoints';
 import './Header.scss';
 import { BurgerMenuButton } from '../shared/BurgerMenu/BurgerMenuButton/BurgerMenuButton';

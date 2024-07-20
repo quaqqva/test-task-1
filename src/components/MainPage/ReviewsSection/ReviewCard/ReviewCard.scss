@@ -1,4 +1,5 @@
 @import 'mixins/base';
+@import 'functions';
 
 .review-card {
   width: 341px;
@@ -9,6 +10,11 @@
   box-shadow: 0px 5px 24px 0px #0000001a;
   will-change: box-shadow;
   transition: box-shadow var(--hover-transition);
+
+  @media (max-width: calc($mobile-width - 1px)) {
+    width: 288px;
+    height: auto;
+  }
 
   &:hover {
     box-shadow: 0px 15px 24px 0px #0000001a;

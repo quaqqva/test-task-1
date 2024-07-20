@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from './Header/Header';
 import { MainPage } from './MainPage/MainPage';
 import { Footer } from './Footer/Footer';
-import { useMatchMedia } from '../hooks/use-match-media';
+import { useMatchMedia } from '../utils/use-match-media';
 import { TABLET_WIDTH } from '../constants/breakpoints';
 import {
   MobileNavigationMenu,

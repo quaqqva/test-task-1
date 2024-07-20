@@ -4,7 +4,7 @@ import secondReviewerPicture from '../../../assets/images/reviews-section/review
 import thirdReviewerPicture from '../../../assets/images/reviews-section/reviewer-3.png';
 import { Review, ReviewCard } from './ReviewCard/ReviewCard';
 import './ReviewsSection.scss';
-import { Slider } from '../../shared/Slider/Slider';
+import { Slider, SliderBreakpoint } from '../../shared/Slider/Slider';
 
 const reviewsBase: Review[] = [
   {
@@ -38,9 +38,40 @@ const mockReviews = new Array(5)
     )),
   );
 
+const slideBreakpoints: SliderBreakpoint[] = [
+  {
+    minWidth: 1250,
+    sliderWidth: 1215,
+    viewportSidePadding: 30,
+    displaySideButtons: true,
+    itemsPerSlide: 3,
+  },
+  {
+    minWidth: 768,
+    sliderWidth: 745,
+    viewportSidePadding: 15,
+    displaySideButtons: false,
+    itemsPerSlide: 2,
+  },
+  {
+    minWidth: 375,
+    sliderWidth: 361,
+    viewportSidePadding: 10,
+    displaySideButtons: false,
+    itemsPerSlide: 1,
+  },
+  {
+    minWidth: 0,
+    sliderWidth: 298,
+    viewportSidePadding: 5,
+    displaySideButtons: false,
+    itemsPerSlide: 1,
+  },
+];
+
 export const ReviewsSection = () => (
   <section className="reviews-section">
     <h2 className="reviews-section__heading">Отзывы</h2>
-    <Slider slides={mockReviews}></Slider>
+    <Slider slides={mockReviews} breakpoints={slideBreakpoints}></Slider>
   </section>
 );

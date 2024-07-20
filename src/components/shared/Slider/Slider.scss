@@ -5,17 +5,16 @@
   width: 100%;
 
   $slider-content-vertical-padding: 32px;
-  $slider-content-side-padding: 30px;
   --slide-gap: 80px;
 
   &__inner {
-    @include flex($gap: calc(32px - $slider-content-side-padding));
+    @include flex();
   }
 
   &__viewport {
     width: 100%;
     overflow-x: hidden;
-    padding: $slider-content-vertical-padding $slider-content-side-padding;
+    padding: $slider-content-vertical-padding 0;
   }
 
   &__slides {
