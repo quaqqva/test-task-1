@@ -54,9 +54,16 @@ const slideBreakpoints: SliderBreakpoint[] = [
     itemsPerSlide: 2,
   },
   {
+    minWidth: 400,
+    sliderWidth: 381,
+    viewportSidePadding: 20,
+    displaySideButtons: false,
+    itemsPerSlide: 1,
+  },
+  {
     minWidth: 375,
-    sliderWidth: 361,
-    viewportSidePadding: 10,
+    sliderWidth: 351,
+    viewportSidePadding: 5,
     displaySideButtons: false,
     itemsPerSlide: 1,
   },
