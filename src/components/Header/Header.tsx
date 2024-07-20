@@ -1,39 +1,37 @@
-import React from 'react';
-import { Logo } from './Logo/Logo';
+import React, { useContext } from 'react';
+import { Logo } from '../Logo/Logo';
+import { NAVIGATION_LINKS } from '../../constants/navigation-links';
+import { useMatchMedia } from '../../hooks/use-match-media';
+import { TABLET_WIDTH } from '../../constants/breakpoints';
 import './Header.scss';
+import { BurgerMenuButton } from '../shared/BurgerMenu/BurgerMenuButton/BurgerMenuButton';
+import { MobileNavigationMenuContext } from '../MobileNavigationMenu/MobileNavigationMenu';
 
-const links = [
-  {
-    url: '#how-it-works',
-    text: 'Как это работает',
-  },
-  {
-    url: '#third-block',
-    text: '3-й блок',
-  },
-  {
-    url: '#faq',
-    text: 'Вопросы и ответы',
-  },
-  {
-    url: '#form',
-    text: 'Форма',
-  },
-];
+export const Header = () => {
+  const isTablet = useMatchMedia(
+    `(max-width: ${TABLET_WIDTH}px)`,
+    window.innerWidth <= TABLET_WIDTH,
+  );
+  const mobileMenuContext = useContext(MobileNavigationMenuContext);
 
-export const Header = () => (
-  <header className="header">
-    <Logo></Logo>
-    <nav className="header__navigation">
-      <ul className="header__links">
-        {links.map(({ url, text }) => (
-          <li key={text}>
-            <a className="header__link" href={url}>
-              {text}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  </header>
-);
+  return (
+    <header className="header">
+      <Logo variation="light"></Logo>
+      {isTablet ? (
+        <BurgerMenuButton context={mobileMenuContext} />
+      ) : (
+        <nav className="header__navigation">
+          <ul className="header__links">
+            {NAVIGATION_LINKS.map(({ url, text }) => (
+              <li key={text}>
+                <a className="header__link" href={url}>
+                  {text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+    </header>
+  );
+};
