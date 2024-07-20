@@ -6,9 +6,24 @@
 
   @include flex($direction: column, $align-items: flex-start, $gap: 16px);
 
+  @media (max-width: $step-card-tablet-breakpoint) {
+    width: 342px;
+    height: 76px;
+    flex-direction: row;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+    height: 100px;
+  }
+
   &__icon {
     width: 72px;
     aspect-ratio: 1/1;
+
+    @media (max-width: $step-card-tablet-breakpoint) {
+      width: 56px;
+    }
   }
 
   &__title {

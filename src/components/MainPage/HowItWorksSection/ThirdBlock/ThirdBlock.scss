@@ -1,4 +1,5 @@
 @import 'mixins/base';
+@import 'functions';
 
 .third-block {
   padding-top: 80px;
@@ -6,11 +7,15 @@
 
   &__heading {
     @include heading-3;
+
+    @media (max-width: $tablet-width) {
+      @include heading-5;
+    }
   }
 
   &__text {
     @include font-16;
-    width: 592px;
+    width: to-responsive(592px, $min: 347px);
   }
 
   &__description {
@@ -20,8 +25,8 @@
 
   &__images {
     position: relative;
-    width: 592px;
-    height: 448px;
+    width: to-responsive(592px, $min: 351px);
+    aspect-ratio: 592 / 448;
   }
 
   &__truck-image,
@@ -35,5 +40,25 @@
     top: 0;
     left: 0;
     z-index: -1;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 56px;
+  }
+
+  @media (max-width: calc($tablet-width - 1px)) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    &__text,
+    &__images {
+      width: 100%;
+    }
   }
 }

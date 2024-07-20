@@ -3,7 +3,7 @@
   $dimension-size: 100vw,
   $relative-to: 1920px,
   $min: 0px,
-  $max: 1920px
+  $max: $value
 ) {
   @return clamp($min, calc($value * $dimension-size / $relative-to), $max);
 }

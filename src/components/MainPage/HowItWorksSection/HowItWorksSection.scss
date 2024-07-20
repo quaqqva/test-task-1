@@ -1,10 +1,18 @@
 @import 'mixins/base';
 
 .how-it-works-section {
+  padding-left: 20px;
+  padding-right: 20px;
+
   @include section;
 
   &__steps {
     padding-top: 60px;
     @include flex($gap: 32px, $wrap: wrap);
+
+    @media (max-width: $step-card-tablet-breakpoint) {
+      margin: 0 auto;
+      max-width: 800px;
+    }
   }
 }
