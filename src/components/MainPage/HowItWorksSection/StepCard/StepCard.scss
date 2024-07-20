@@ -12,7 +12,7 @@
     flex-direction: row;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: calc($mobile-width - 1px)) {
     width: 288px;
     height: 100px;
   }

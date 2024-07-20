@@ -5,6 +5,13 @@
   @include flex($direction: column);
 
   $open-transition: 0.5s ease-in-out;
+  --accordion-side-padding: 20px;
+
+  padding: 0 var(--accordion-side-padding);
+
+  @media (max-width: $mobile-width) {
+    --accordion-side-padding: 16px;
+  }
 
   &__item {
     width: 100%;
@@ -28,7 +35,7 @@
   }
 
   &__heading {
-    @include flex($justify-content: space-between);
+    @include flex($justify-content: space-between, $gap: 20px);
     cursor: pointer;
 
     will-change: color;
@@ -80,6 +87,10 @@
     @include font-18;
     color: var(--dark-gray);
 
-    padding-right: 72px;
+    padding-right: calc(72px - var(--accordion-side-padding));
+
+    @media (max-width: $mobile-width) {
+      padding-right: calc(60px - var(--accordion-side-padding));
+    }
   }
 }

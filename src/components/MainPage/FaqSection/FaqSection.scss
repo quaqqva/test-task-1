@@ -4,9 +4,13 @@
   @include section;
 
   .accordion {
-    width: 1008px;
+    width: min(calc(1008px + 2 * var(--accordion-side-padding)), 100%);
     margin: 0 auto;
 
     padding-top: 40px;
+
+    @media (max-width: calc($mobile-width - 1px)) {
+      padding-top: 28px;
+    }
   }
 }
