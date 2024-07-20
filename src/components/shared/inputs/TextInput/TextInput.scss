@@ -29,7 +29,7 @@
     @include font-18;
     color: var(--dark-gray);
 
-    cursor: text;
+    pointer-events: none;
 
     position: absolute;
     left: $input-padding;
