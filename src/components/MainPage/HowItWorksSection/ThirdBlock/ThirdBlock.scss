@@ -3,6 +3,8 @@
 
 .third-block {
   padding-top: 80px;
+
+  width: 100%;
   @include flex($gap: 32px);
 
   &__heading {
@@ -15,7 +17,11 @@
 
   &__text {
     @include font-16;
-    width: to-responsive(592px, $min: 347px);
+
+    width: 592px;
+    @media (max-width: $step-card-tablet-breakpoint) {
+      width: to-responsive(592px, $min: 347px);
+    }
   }
 
   &__description {
@@ -25,8 +31,13 @@
 
   &__images {
     position: relative;
-    width: to-responsive(592px, $min: 351px);
+
+    width: 592px;
     aspect-ratio: 592 / 448;
+
+    @media (max-width: $step-card-tablet-breakpoint) {
+      width: to-responsive(592px, $min: 351px);
+    }
   }
 
   &__truck-image,
