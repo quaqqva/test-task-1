@@ -4,11 +4,28 @@
   background-color: var(--extralight-gray);
 
   @include flex($align-items: flex-start, $gap: 32px 36px, $wrap: wrap);
-  @include section($padding: 68px 0);
+  @include section(
+    $padding: 68px 20px,
+    $tablet-padding: 20px 20px 32px,
+    $mobile-padding: 20px 16px,
+    $small-mobile-padding: 16px
+  );
+
+  @media (max-width: $tablet-width) {
+    $gap: 20px;
+  }
 
   &__text-block {
     width: 592px;
     @include flex($align-items: flex-start, $direction: column, $gap: 16px);
+
+    @media (max-width: 1260px) and (min-width: $tablet-width) {
+      gap: 48px;
+    }
+
+    @media (min-width: 1260px) {
+      gap: 16px;
+    }
   }
 
   &__title {

@@ -16,12 +16,25 @@
   flex-wrap: $wrap;
 }
 
-@mixin section($padding: 80px 0, $tablet-padding: 56px 0) {
+@mixin section(
+  $padding: 80px 0,
+  $tablet-padding: 56px 0,
+  $mobile-padding: $tablet-padding,
+  $small-mobile-padding: $mobile-padding
+) {
   & {
     padding: $padding;
 
     @media (max-width: $tablet-width) {
       padding: $tablet-padding;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding: $mobile-padding;
+    }
+
+    @media (max-width: $min-width) {
+      padding: $small-mobile-padding;
     }
   }
 
