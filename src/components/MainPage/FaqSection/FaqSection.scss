@@ -4,7 +4,7 @@
   @include section;
 
   .accordion {
-    width: min(calc(1008px + 2 * var(--accordion-side-padding)), 100%);
+    width: min(1008px, 100%);
     margin: 0 auto;
 
     padding-top: 40px;

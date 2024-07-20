@@ -1,9 +1,6 @@
 @import 'mixins/base';
 
 .how-it-works-section {
-  padding-left: 20px;
-  padding-right: 20px;
-
   @include section;
 
   &__steps {

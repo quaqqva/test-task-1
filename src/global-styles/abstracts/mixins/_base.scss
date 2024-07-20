@@ -17,9 +17,9 @@
 }
 
 @mixin section(
-  $padding: 80px 0,
-  $tablet-padding: 56px 0,
-  $mobile-padding: $tablet-padding,
+  $padding: 80px 20px,
+  $tablet-padding: 56px 20px,
+  $mobile-padding: 56px 16px,
   $small-mobile-padding: $mobile-padding
 ) {
   & {

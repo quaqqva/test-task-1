@@ -2,11 +2,7 @@
 @import 'functions';
 
 .form-section {
-  @include section(
-    $padding: 80px 20px,
-    $tablet-padding: 56px 20px,
-    $mobile-padding: 56px 16px
-  );
+  @include section;
 
   &__form {
     margin: 0 auto;
