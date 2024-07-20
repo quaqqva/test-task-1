@@ -4,6 +4,7 @@ import { HowItWorksSection } from './HowItWorksSection/HowItWorksSection';
 import { ReviewsSection } from './ReviewsSection/ReviewsSection';
 import { FaqSection } from './FaqSection/FaqSection';
 import { TextSection } from './TextSection/TextSection';
+import { FormSection } from './FormSection/FormSection';
 
 export const MainPage = () => (
   <main>
@@ -12,5 +13,6 @@ export const MainPage = () => (
     <ReviewsSection />
     <FaqSection />
     <TextSection />
+    <FormSection />
   </main>
 );

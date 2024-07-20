@@ -1,0 +1,104 @@
+@import 'mixins/base';
+
+.text-input {
+  $self: &;
+  $input-padding: 16px;
+  $active-input-bottom-padding: 4px;
+  $validity-icon-size: 20px;
+  $state-transition: ease-in-out 0.25s;
+
+  &__label {
+    position: relative;
+    @include flex();
+  }
+
+  &_dirty,
+  &:has(input[placeholder], input:focus) {
+    #{$self}__label-text {
+      translate: 0 -12px;
+      font-size: 14px;
+    }
+
+    #{$self}__field {
+      padding-top: calc(2 * $input-padding - $active-input-bottom-padding);
+      padding-bottom: $active-input-bottom-padding;
+    }
+  }
+
+  &__label-text {
+    @include font-18;
+    color: var(--dark-gray);
+
+    cursor: text;
+
+    position: absolute;
+    left: $input-padding;
+
+    will-change: font-size, translate;
+    transition:
+      font-size $state-transition,
+      translate $state-transition;
+  }
+
+  &__field {
+    width: 100%;
+    padding: $input-padding;
+
+    outline: none;
+    border: 2px solid var(--extralight-gray);
+
+    @include font-18;
+
+    background-color: var(--extralight-gray);
+    will-change: background-color, border-color, padding-top, padding-bottom;
+    transition:
+      background-color $state-transition,
+      border-color $state-transition,
+      padding-top $state-transition,
+      padding-bottom $state-transition;
+
+    &:focus {
+      background-color: var(--white);
+    }
+  }
+
+  &__validity-icon {
+    z-index: 1;
+    font-size: $validity-icon-size;
+    height: $validity-icon-size;
+
+    position: absolute;
+    right: $input-padding;
+  }
+
+  &_touched.text-input_invalid {
+    #{$self}__field {
+      border-color: var(--color-dangerous);
+    }
+
+    #{$self}__helper-text,
+    #{$self}__validity-icon {
+      color: var(--color-dangerous);
+    }
+  }
+
+  &_touched.text-input_valid {
+    #{$self}__validity-icon {
+      color: var(--color-success);
+    }
+  }
+
+  &__helper-text {
+    padding-top: 4px;
+    @include font-12;
+
+    color: var(--gray);
+    will-change: color, opacity;
+    transition: color $state-transition;
+
+    animation: smooth-appear $state-transition;
+  }
+}
+
+//В неактивном состоянии без плейсхолдера лейбл сидит по центру инпута
+//Лейбл при вводе сдвигается вверх на 8px и сжимается до 14px

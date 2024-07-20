@@ -10,7 +10,7 @@ const title = 'Опрошенных пользовались микрокред�
 
 const textBlocks = new Array(4).fill(null).map((_, index) => (
   <div key={index} className="text-section__text-block">
-    <p className="text-section__title">{title}</p>
+    <h5 className="text-section__title">{title}</h5>
     <p className="text-section__description">
       {index === 0 || index === 3 ? description1 : description2}
     </p>

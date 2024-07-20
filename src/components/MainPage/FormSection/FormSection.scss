@@ -1,0 +1,22 @@
+@import 'mixins/base';
+
+.form-section {
+  @include section;
+
+  &__form {
+    margin: 0 auto;
+    padding-top: 44px;
+
+    width: 800px;
+    @include flex($gap: 32px, $align-items: flex-start, $wrap: wrap);
+
+    label,
+    button {
+      width: 384px;
+    }
+  }
+
+  &__checkbox-wrapper {
+    @include flex($justify-content: flex-start, $gap: 16px);
+  }
+}
