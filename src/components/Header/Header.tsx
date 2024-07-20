@@ -4,19 +4,19 @@ import './Header.scss';
 
 const links = [
   {
-    url: '#',
+    url: '#how-it-works',
     text: 'Как это работает',
   },
   {
-    url: '#',
+    url: '#third-block',
     text: '3-й блок',
   },
   {
-    url: '#',
+    url: '#faq',
     text: 'Вопросы и ответы',
   },
   {
-    url: '#',
+    url: '#form',
     text: 'Форма',
   },
 ];

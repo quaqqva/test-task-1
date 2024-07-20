@@ -4,7 +4,7 @@ import truckImage from '../../../../assets/images/third-block/truck.jpg';
 import './ThirdBlock.scss';
 
 export const ThirdBlock = () => (
-  <div className="third-block">
+  <div id="third-block" className="third-block">
     <div className="third-block__text">
       <h3 className="third-block__heading">
         Круто, ты дошёл до третьего блока

@@ -25,7 +25,7 @@ export const FormSection = () => {
   const onSubmit = handleSubmit(() => {});
 
   return (
-    <section className="form-section">
+    <section id="form" className="form-section">
       <h2 className="form-section__heading">Отправь форму</h2>
       <FormProvider {...methods}>
         <form className="form-section__form" onSubmit={onSubmit}>

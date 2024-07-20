@@ -39,7 +39,7 @@ questions = questions.map((question) => ({
 }));
 
 export const FaqSection = () => (
-  <section className="faq-section">
+  <section id="faq" className="faq-section">
     <h2 className="faq-section__heading">Вопросы и ответы</h2>
     <Accordion
       items={questions.map((question) => ({

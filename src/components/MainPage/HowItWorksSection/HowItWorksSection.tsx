@@ -33,7 +33,7 @@ const steps: StepInfo[] = [
 ];
 
 export const HowItWorksSection = () => (
-  <section className="how-it-works-section">
+  <section id="how-it-works" className="how-it-works-section">
     <h2 className="how-it-works-section__heading">Как это работает</h2>
     <div className="how-it-works-section__steps">
       {steps.map((step) => (
