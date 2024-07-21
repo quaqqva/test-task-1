@@ -10,7 +10,7 @@
   &__heading {
     @include heading-3;
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $step-card-tablet-breakpoint) {
       @include heading-5;
     }
   }
