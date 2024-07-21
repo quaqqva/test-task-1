@@ -1,4 +1,5 @@
 @import 'mixins/base';
+@import 'variables';
 
 .slider {
   margin: 0 auto;
@@ -30,6 +31,10 @@
     padding-top: calc(50px - $slider-content-vertical-padding);
     margin: 0 auto;
     @include flex($gap: 17px);
+
+    @media (max-width: $tablet-width) {
+      padding-top: calc(36px - $slider-content-vertical-padding);
+    }
 
     &-button {
       width: 8px;
