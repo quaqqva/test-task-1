@@ -4,8 +4,10 @@ import { App } from './components/App';
 import './global-styles/styles.scss';
 import 'react-toastify/dist/ReactToastify.css';
 
-createRoot(document.getElementById('root') as HTMLElement).render(
+const entry = (
   <StrictMode>
-    <App />,
-  </StrictMode>,
+    <App></App>
+  </StrictMode>
 );
+
+createRoot(document.getElementById('root') as HTMLElement).render(entry);
