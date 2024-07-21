@@ -98,9 +98,6 @@
     will-change: color, opacity;
     transition: color $state-transition;
 
-    animation: smooth-appear $state-transition;
+    animation: smooth-appear $state-transition forwards;
   }
 }
-
-//В неактивном состоянии без плейсхолдера лейбл сидит по центру инпута
-//Лейбл при вводе сдвигается вверх на 8px и сжимается до 14px

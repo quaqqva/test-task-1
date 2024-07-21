@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
-import './TextInput.scss';
 import { FieldMetaState } from 'react-final-form';
+import './TextInput.scss';
 
 type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   name: string;
@@ -49,11 +49,15 @@ export const TextInput = forwardRef<HTMLInputElement, InputProps>(
           <></>
         )}
       </label>
-      <span className="text-input__helper-text">
-        {metaState.touched || (metaState.dirty && metaState.error)
-          ? metaState.error
-          : initialHelperText}
-      </span>
+      {metaState.error || initialHelperText ? (
+        <span className="text-input__helper-text">
+          {metaState.touched || (metaState.dirty && metaState.error)
+            ? metaState.error
+            : initialHelperText}
+        </span>
+      ) : (
+        <></>
+      )}
     </div>
   ),
 );
