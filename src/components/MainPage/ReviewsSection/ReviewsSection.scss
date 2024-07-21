@@ -1,0 +1,8 @@
+@import 'mixins/base';
+
+.reviews-section {
+  background-color: var(--extralight-gray);
+  width: 100%;
+
+  @include section($padding: 56px 0 44px);
+}

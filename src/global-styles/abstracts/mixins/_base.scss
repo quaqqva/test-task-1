@@ -1,0 +1,49 @@
+@import 'variables';
+@import './typography';
+
+@mixin flex(
+  $justify-content: center,
+  $align-items: center,
+  $direction: row,
+  $gap: 0,
+  $wrap: nowrap
+) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $direction;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+@mixin section(
+  $padding: 80px 20px,
+  $tablet-padding: 56px 20px,
+  $mobile-padding: 56px 16px,
+  $small-mobile-padding: $mobile-padding
+) {
+  & {
+    padding: $padding;
+
+    @media (max-width: $tablet-width) {
+      padding: $tablet-padding;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding: $mobile-padding;
+    }
+
+    @media (max-width: $min-width) {
+      padding: $small-mobile-padding;
+    }
+  }
+
+  &__heading {
+    @include heading-2;
+    text-align: center;
+
+    @media (max-width: $mobile-width) {
+      @include heading-4;
+    }
+  }
+}

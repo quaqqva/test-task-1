@@ -1,0 +1,9 @@
+@import 'mixins/base';
+
+.footer {
+  border-top: 1px solid var(--light-gray);
+  height: 88px;
+
+  @include font-18;
+  @include flex();
+}

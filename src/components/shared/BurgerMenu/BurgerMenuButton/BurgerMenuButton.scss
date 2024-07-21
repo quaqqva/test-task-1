@@ -1,0 +1,19 @@
+@import 'mixins/base';
+
+.burger-menu-button {
+  cursor: pointer;
+
+  background: none;
+  border: none;
+
+  width: 62px;
+  aspect-ratio: 1 / 1;
+
+  @include flex($direction: column, $gap: 8px);
+
+  &__bar {
+    width: 22px;
+    height: 2px;
+    background-color: var(--white);
+  }
+}

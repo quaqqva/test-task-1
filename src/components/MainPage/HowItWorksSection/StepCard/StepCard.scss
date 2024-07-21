@@ -1,0 +1,38 @@
+@import 'mixins/base';
+
+.step-card {
+  width: 280px;
+  height: 164px;
+
+  @include flex($direction: column, $align-items: flex-start, $gap: 16px);
+
+  @media (max-width: $step-card-tablet-breakpoint) {
+    width: 342px;
+    height: 76px;
+    flex-direction: row;
+  }
+
+  @media (max-width: calc($mobile-width - 1px)) {
+    width: 288px;
+    height: 100px;
+  }
+
+  &__icon {
+    width: 72px;
+    aspect-ratio: 1/1;
+
+    @media (max-width: $step-card-tablet-breakpoint) {
+      width: 56px;
+    }
+  }
+
+  &__title {
+    @include heading-6;
+    padding-bottom: 4px;
+  }
+
+  &__description {
+    color: var(--dark-gray);
+    @include font-14;
+  }
+}

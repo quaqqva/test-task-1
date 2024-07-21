@@ -1,0 +1,50 @@
+@import 'mixins/base';
+@import 'functions';
+
+.review-card {
+  width: 341px;
+  height: 316px;
+  padding: 22px 22px 62px 22px;
+  border-radius: 8px;
+
+  box-shadow: 0px 5px 24px 0px #0000001a;
+  will-change: box-shadow;
+  transition: box-shadow var(--hover-transition);
+
+  @media (max-width: calc($mobile-width - 1px)) {
+    width: 288px;
+    height: auto;
+  }
+
+  &:hover {
+    box-shadow: 0px 15px 24px 0px #0000001a;
+  }
+
+  &__heading {
+    padding-bottom: 20px;
+    @include flex(
+      $justify-content: flex-start,
+      $align-items: flex-start,
+      $gap: 16px
+    );
+  }
+
+  &__image {
+    width: 44px;
+    aspect-ratio: 1 / 1;
+  }
+
+  &__user-name {
+    @include heading-6;
+    padding-bottom: 4px;
+  }
+
+  &__city {
+    @include font-12;
+    color: var(--dark-grey);
+  }
+
+  &__review {
+    @include font-14;
+  }
+}

@@ -1,0 +1,31 @@
+@import 'mixins/base';
+@import 'functions';
+
+.form-section {
+  @include section;
+
+  &__form {
+    margin: 0 auto;
+    padding-top: 44px;
+
+    width: min(800px, 100%);
+    @include flex($gap: 32px 30px, $align-items: flex-start, $wrap: wrap);
+
+    @media (max-width: $tablet-width) {
+      gap: 24px 30px;
+    }
+
+    @media (max-width: $mobile-width) {
+      gap: 20px;
+    }
+
+    & > * {
+      width: to-responsive(384px, $min: 343px);
+    }
+  }
+
+  &__checkbox-wrapper {
+    @include flex($justify-content: flex-start, $gap: 16px);
+    @include font-16;
+  }
+}

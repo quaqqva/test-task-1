@@ -1,0 +1,62 @@
+@import 'mixins/typography';
+
+.button {
+  cursor: pointer;
+
+  padding: 20px 40px;
+
+  border: 1px solid;
+  border-radius: 4px;
+
+  will-change: background-color, border-color;
+  transition:
+    background-color var(--hover-transition),
+    border-color var(--hover-transition);
+
+  @include heading-5();
+
+  &_default {
+    background-color: var(--light-gray);
+    border-color: var(--light-gray);
+    color: var(--black);
+
+    &:hover {
+      background-color: var(--white);
+      border-color: var(--mid-gray);
+    }
+  }
+
+  &_primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
+    }
+  }
+
+  &_icon-only {
+    width: 32px;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+
+    font-size: 32px;
+
+    will-change: color;
+    transition: color var(--hover-transition);
+
+    color: var(--mid-gray);
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,16 @@
+@import 'mixins/base';
+
+.faq-section {
+  @include section;
+
+  .accordion {
+    width: min(1008px, 100%);
+    margin: 0 auto;
+
+    padding-top: 40px;
+
+    @media (max-width: calc($mobile-width - 1px)) {
+      padding-top: 28px;
+    }
+  }
+}

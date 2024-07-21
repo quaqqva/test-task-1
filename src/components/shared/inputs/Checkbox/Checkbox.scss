@@ -1,0 +1,38 @@
+@import 'mixins/base';
+
+.checkbox {
+  appearance: none;
+
+  cursor: pointer;
+
+  width: 24px;
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--mid-gray);
+  border-radius: 4px;
+
+  will-change: background-color, border-color;
+  transition:
+    background-color var(--hover-transition),
+    border-color var(--hover-transition);
+
+  @include flex();
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url('../../../../assets/images/check.svg') no-repeat;
+    background-position: center;
+    will-change: opacity;
+    transition: opacity var(--hover-transition);
+  }
+
+  &:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
