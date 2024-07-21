@@ -5,7 +5,7 @@ export type LogoProps = {
   variation: 'light' | 'dark';
 };
 
-export const Logo = ({ variation }: LogoProps) => (
+export const Logo: React.FC<LogoProps> = ({ variation }) => (
   <a className={`logo logo_${variation}`} href="">
     <div className="logo__inner">
       <div className="logo__circle"></div>

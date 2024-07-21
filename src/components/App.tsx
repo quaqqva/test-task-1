@@ -10,7 +10,7 @@ import {
   MobileNavigationMenuContext,
 } from './MobileNavigationMenu/MobileNavigationMenu';
 
-export const App = () => {
+export const App: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const isTablet = useMatchMedia(

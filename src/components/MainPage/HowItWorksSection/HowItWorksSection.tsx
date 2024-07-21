@@ -32,7 +32,7 @@ const steps: StepInfo[] = [
   },
 ];
 
-export const HowItWorksSection = () => (
+export const HowItWorksSection: React.FC = () => (
   <section id="how-it-works" className="how-it-works-section">
     <h2 className="how-it-works-section__heading">Как это работает</h2>
     <div className="how-it-works-section__steps">

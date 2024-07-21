@@ -12,7 +12,10 @@ type BurgerMenuProps = {
   children: React.ReactNode;
 };
 
-export const BurgerMenu = ({ context, children }: BurgerMenuProps) => (
+export const BurgerMenu: React.FC<BurgerMenuProps> = ({
+  context,
+  children,
+}) => (
   <div className={`burger-menu ${context.isOpen ? 'burger-menu_open' : ''}`}>
     <div className="burger-menu__background" onClick={context.close}></div>
     <div className="burger-menu__inner">{children}</div>

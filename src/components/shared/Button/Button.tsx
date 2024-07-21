@@ -6,11 +6,11 @@ type ButtonProps = {
   children?: React.ReactNode;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button = ({
+export const Button: React.FC<ButtonProps> = ({
   severity = 'default',
   children,
   ...props
-}: ButtonProps) => (
+}) => (
   <button
     {...props}
     className={`button button_${severity}${props.className ? ` ${props.className}` : ''}`}

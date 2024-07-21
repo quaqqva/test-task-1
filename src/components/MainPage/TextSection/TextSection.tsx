@@ -17,6 +17,6 @@ const textBlocks = new Array(4).fill(null).map((_, index) => (
   </div>
 ));
 
-export const TextSection = () => (
+export const TextSection: React.FC = () => (
   <section className="text-section">{textBlocks}</section>
 );

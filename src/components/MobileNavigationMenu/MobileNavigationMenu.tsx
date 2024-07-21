@@ -11,7 +11,7 @@ export const MobileNavigationMenuContext = createContext<BurgerMenuContext>({
   close: () => {},
 });
 
-export const MobileNavigationMenu = () => {
+export const MobileNavigationMenu: React.FC = () => {
   const context = useContext(MobileNavigationMenuContext);
   return (
     <BurgerMenu context={context}>

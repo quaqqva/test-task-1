@@ -19,7 +19,7 @@ type FormSectionData = {
   agreed: boolean;
 };
 
-export const FormSection = () => {
+export const FormSection: React.FC = () => {
   const onSubmit = async (data: FormSectionData) => {
     fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',

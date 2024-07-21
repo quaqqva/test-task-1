@@ -10,7 +10,7 @@ type AccordionProps = {
   items: AccordionItem[];
 };
 
-export const Accordion = ({ items }: AccordionProps) => {
+export const Accordion: React.FC<AccordionProps> = ({ items }) => {
   const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
   return (
     <div className="accordion">

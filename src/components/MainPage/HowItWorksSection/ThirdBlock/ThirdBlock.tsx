@@ -3,7 +3,7 @@ import manImage from '../../../../assets/images/third-block/man.png';
 import truckImage from '../../../../assets/images/third-block/truck.jpg';
 import './ThirdBlock.scss';
 
-export const ThirdBlock = () => (
+export const ThirdBlock: React.FC = () => (
   <div id="third-block" className="third-block">
     <div className="third-block__text">
       <h3 className="third-block__heading">

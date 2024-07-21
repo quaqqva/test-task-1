@@ -6,7 +6,7 @@ import { FaqSection } from './FaqSection/FaqSection';
 import { TextSection } from './TextSection/TextSection';
 import { FormSection } from './FormSection/FormSection';
 
-export const MainPage = () => (
+export const MainPage: React.FC = () => (
   <main>
     <HeroSection />
     <HowItWorksSection />

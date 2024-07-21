@@ -76,7 +76,7 @@ const slideBreakpoints: SliderBreakpoint[] = [
   },
 ];
 
-export const ReviewsSection = () => (
+export const ReviewsSection: React.FC = () => (
   <section className="reviews-section">
     <h2 className="reviews-section__heading">Отзывы</h2>
     <Slider slides={mockReviews} breakpoints={slideBreakpoints}></Slider>

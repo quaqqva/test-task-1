@@ -11,7 +11,7 @@ type StepCardProps = {
   stepInfo: StepInfo;
 };
 
-export const StepCard = ({ stepInfo }: StepCardProps) => (
+export const StepCard: React.FC<StepCardProps> = ({ stepInfo }) => (
   <div className="step-card">
     <img
       src={stepInfo.iconUrl}

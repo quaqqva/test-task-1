@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../../shared/Button/Button';
 import './HeroSection.scss';
 
-export const HeroSection = () => (
+export const HeroSection: React.FC = () => (
   <section className="hero-section">
     <div className="hero-section__inner">
       <h1 className="hero-section__heading">

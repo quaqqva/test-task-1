@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from 'react';
-import './Slider.scss';
 import { Button } from '../Button/Button';
 import { SwipeDirection, swipeListen } from '../../../utils/swipe-listen';
 import { useWindowSize } from '../../../utils/use-window-size';
+import './Slider.scss';
 
 export type SliderBreakpoint = {
   minWidth: number;
@@ -18,11 +18,11 @@ type SliderProps = {
   isCyclic?: boolean;
 };
 
-export const Slider = ({
+export const Slider: React.FC<SliderProps> = ({
   isCyclic = false,
   breakpoints,
   slides,
-}: SliderProps) => {
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [leftButtonDisabled, setLeftButtonDisabled] = useState(!isCyclic);
   const [rightButtonDisabled, setRightButtonDisabled] = useState(false);

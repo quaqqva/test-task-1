@@ -7,7 +7,7 @@ import { BurgerMenuButton } from '../shared/BurgerMenu/BurgerMenuButton/BurgerMe
 import { MobileNavigationMenuContext } from '../MobileNavigationMenu/MobileNavigationMenu';
 import './Header.scss';
 
-export const Header = () => {
+export const Header: React.FC = () => {
   const isTablet = useMatchMedia(
     `(max-width: ${TABLET_WIDTH}px)`,
     window.innerWidth <= TABLET_WIDTH,

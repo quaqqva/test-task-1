@@ -12,7 +12,7 @@ type ReviewCardProps = {
   review: Review;
 };
 
-export const ReviewCard = ({ review }: ReviewCardProps) => (
+export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => (
   <div className="review-card">
     <div className="review-card__heading">
       <img
