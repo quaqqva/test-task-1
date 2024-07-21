@@ -1,4 +1,5 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 import { Header } from './Header/Header';
 import { MainPage } from './MainPage/MainPage';
 import { Footer } from './Footer/Footer';
@@ -22,6 +23,7 @@ export const App = () => {
       <Header />
       <MainPage />
       <Footer />
+      <ToastContainer />
     </>
   );
 

@@ -71,6 +71,7 @@
     right: $input-padding;
   }
 
+  &_dirty.text-input_invalid,
   &_touched.text-input_invalid {
     #{$self}__field {
       border-color: var(--color-dangerous);
@@ -82,6 +83,7 @@
     }
   }
 
+  &_dirty.text-input_valid,
   &_touched.text-input_valid {
     #{$self}__validity-icon {
       color: var(--color-success);
